@@ -21,4 +21,4 @@ jobs:
       - run: echo "${GITHUB_REF}"
       - run: echo "${GITHUB_REF#refs/tags/}"
       - run: echo "${{github.ref}}"
-      - run: echo "${{github.ref#refs/tags/}}"
+      - run: echo "${${{github.ref}}#refs/tags/}"
