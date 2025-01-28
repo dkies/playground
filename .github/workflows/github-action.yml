@@ -24,3 +24,7 @@ jobs:
       - run: echo "${${{github.ref}}#refs/tags/}"
       - run: echo "TMPREF=${{github.ref}}" >> $GITHUB_ENV 
       - run: echo "${TMPREF#refs/tags/}"
+      - name: GitHub Tag Name example
+        run: |
+          echo "Tag name from GITHUB_REF_NAME: $GITHUB_REF_NAME"
+          echo "Tag name from github.ref_name: ${{  github.ref_name }}"
